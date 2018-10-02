@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/white"
+    android:id="@+id/rl_total_view"
+    tools:context="com.example.quangtruong.demo.MainActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp">
+
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logo"
+            android:transitionName="@string/logo_transition"
+            android:contentDescription="@string/logo_content"
+            tools:targetApi="lollipop" />
+
+        <RelativeLayout
+            android:id="@+id/rl_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_logo"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/ll_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:orientation="vertical">
+
+                <!--UserName-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:id="@+id/img_error_user"
+                            style="@style/ic_style"
+                            android:src="@drawable/ic_user"
+                            android:contentDescription="@null" />
+
+                        <TextView
+                            android:id="@+id/tv_error_user_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/extra_small_padding"
+                            android:fontFamily="sans-serif-light"
+                            android:text="@string/user_name"
+                            android:textColor="@color/text_hint_color"
+                            android:textSize="@dimen/base_text_Size" />
+                    </LinearLayout>
+
+                    <com.example.quangtruong.demo.customview.PlaceHolderInfoDefault
+                        android:id="@+id/edt_username"
+                        style="@style/edit_text_default"
+                        android:imeOptions="actionNext"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+
+                <!--Password-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:id="@+id/img_error_pass"
+                            style="@style/ic_style"
+                            android:src="@drawable/ic_password"
+                            android:contentDescription="@null" />
+
+                        <TextView
+                            android:id="@+id/tv_error_password"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/extra_small_padding"
+                            android:fontFamily="sans-serif-light"
+                            android:text="@string/password"
+                            android:textColor="@color/text_hint_color"
+                            android:textSize="@dimen/base_text_Size" />
+                    </LinearLayout>
+
+                    <com.example.quangtruong.demo.customview.PlaceHolderInfoDefault
+                        android:id="@+id/edt_password"
+                        style="@style/edit_text_default"
+                        android:inputType="textPassword"
+                        android:imeOptions="actionDone"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_forgot_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:fontFamily="sans-serif-light"
+                    android:padding="@dimen/small_padding"
+                    android:text="@string/forgot_pass"
+                    android:textColor="@color/text_primary_color"
+                    android:textSize="@dimen/base_text_Size" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_login"
+                style="@style/button_default"
+                android:layout_below="@+id/ll_login"
+                android:layout_centerHorizontal="true"
+                android:text="@string/login" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_sign_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/transparent"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:layout_margin="@dimen/activity_vertical_margin"
+        android:text="@string/sign_up"
+        android:textColor="@color/text_primary_color"
+        android:textSize="@dimen/base_text_Size"
+        android:visibility="gone" />
+
+</RelativeLayout>

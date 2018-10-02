@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_dialog_corner"
+    android:orientation="vertical"
+    android:padding="@dimen/big_padding">
+
+    <RadioGroup
+        android:id="@+id/rg_theme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rb_blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorPrimary"
+            android:text="@string/theme_blue" />
+
+        <RadioButton
+            android:id="@+id/rb_purple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorPrimary"
+            android:text="@string/theme_purple" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_ok"
+        style="@style/button_default"
+        android:text="@string/ok" />
+</LinearLayout>

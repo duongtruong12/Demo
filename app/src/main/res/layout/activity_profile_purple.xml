@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.ProfileActivity">
+
+    <include layout="@layout/toolbar_home" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary2"
+                android:elevation="@dimen/elevation_height"
+                android:minHeight="200dp"
+                android:padding="@dimen/activity_horizontal_margin"
+                tools:targetApi="lollipop">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_profile"
+                    android:layout_width="@dimen/profile_activity_image_size"
+                    android:layout_height="@dimen/profile_activity_image_size"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/img_default_profile"
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="2dp" />
+
+                <TextView
+                    android:id="@+id/tv_fullname_user"
+                    style="@style/text_view_default"
+                    android:layout_below="@id/img_profile"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/default_padding"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/login_text_size"
+                    tools:text="Dương Quang Trường" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:gravity="center_vertical"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:id="@+id/img_follower"
+                        android:layout_width="@dimen/icon_size_normal"
+                        android:layout_height="@dimen/icon_size_normal"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_follower" />
+
+                    <TextView
+                        android:id="@+id/tv_follower"
+                        style="@style/text_view_default"
+                        android:layout_marginStart="@dimen/default_padding"
+                        android:text="13.6k"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="center_vertical"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:id="@+id/img_share"
+                        android:layout_width="@dimen/icon_size_normal"
+                        android:layout_height="@dimen/icon_size_normal"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_share" />
+
+                    <TextView
+                        android:id="@+id/tv_share"
+                        style="@style/text_view_default"
+                        android:layout_marginStart="@dimen/default_padding"
+                        android:text="446"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

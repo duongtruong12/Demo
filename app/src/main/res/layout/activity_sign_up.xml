@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".activity.SignInActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/toolbar" />
+
+        <ImageView
+            android:id="@+id/img_logo_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:contentDescription="@null"
+            android:scaleX="0.7"
+            android:scaleY="0.7"
+            android:src="@drawable/logo"
+            android:transitionName="@string/logo_transition"
+            tools:targetApi="lollipop" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_vertical_margin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/big_padding"
+                android:baselineAligned="false">
+
+                <!--FirstName-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingEnd="@dimen/default_padding"
+                    android:paddingStart="0dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:id="@+id/img_error_fname"
+                            style="@style/ic_style"
+                            android:padding="@dimen/extra_small_padding"
+                            android:src="@drawable/ic_f_name" />
+
+                        <TextView
+                            android:id="@+id/tv_error_fname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/extra_small_padding"
+                            android:fontFamily="sans-serif-light"
+                            android:text="@string/first_name"
+                            android:textColor="@color/text_hint_color"
+                            android:textSize="@dimen/base_text_Size" />
+                    </LinearLayout>
+
+                    <com.example.quangtruong.demo.customview.PlaceHolderInfoDefault
+                        android:id="@+id/edt_fname"
+                        style="@style/edit_text_default"
+                        android:imeOptions="actionNext"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+
+                <!--LastName-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingEnd="0dp"
+                    android:paddingStart="@dimen/default_padding">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:id="@+id/img_error_lname"
+                            style="@style/ic_style"
+                            android:padding="@dimen/extra_small_padding"
+                            android:src="@drawable/ic_l_name" />
+
+                        <TextView
+                            android:id="@+id/tv_error_lname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/extra_small_padding"
+                            android:fontFamily="sans-serif-light"
+                            android:text="@string/last_name"
+                            android:textColor="@color/text_hint_color"
+                            android:textSize="@dimen/base_text_Size" />
+                    </LinearLayout>
+
+                    <com.example.quangtruong.demo.customview.PlaceHolderInfoDefault
+                        android:id="@+id/edt_lname"
+                        style="@style/edit_text_default"
+                        android:imeOptions="actionNext"
+                        android:singleLine="true" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--ScreenName-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/img_error_sname"
+                        style="@style/ic_style"
+                        android:src="@drawable/ic_phone" />
+
+                    <TextView
+                        android:id="@+id/tv_error_sname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/extra_small_padding"
+                        android:layout_marginStart="@dimen/extra_small_padding"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/screen_name"
+                        android:textColor="@color/text_hint_color"
+                        android:textSize="@dimen/base_text_Size" />
+                </LinearLayout>
+
+                <com.example.quangtruong.demo.customview.PlaceHolderInfoDefault
+                    android:id="@+id/edt_sname"
+                    style="@style/edit_text_default"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+
+            <!--Email-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/img_error_email"
+                        style="@style/ic_style"
+                        android:src="@drawable/ic_mail" />
+
+                    <TextView
+                        android:id="@+id/tv_error_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/extra_small_padding"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/email"
+                        android:textColor="@color/text_hint_color"
+                        android:textSize="@dimen/base_text_Size" />
+                </LinearLayout>
+
+                <com.example.quangtruong.demo.customview.PlaceHolderInfoDefault
+                    android:id="@+id/edt_email"
+                    style="@style/edit_text_default"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <!--Password-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/img_error_pass"
+                        style="@style/ic_style"
+                        android:src="@drawable/ic_password" />
+
+                    <TextView
+                        android:id="@+id/tv_error_pass"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/extra_small_padding"
+                        android:layout_marginStart="@dimen/extra_small_padding"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/password"
+                        android:textColor="@color/text_hint_color"
+                        android:textSize="@dimen/base_text_Size" />
+                </LinearLayout>
+
+                <com.example.quangtruong.demo.customview.PlaceHolderInfoDefault
+                    android:id="@+id/edt_password"
+                    style="@style/edit_text_default"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_sign_up"
+                style="@style/button_default"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:text="@string/sign_up" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

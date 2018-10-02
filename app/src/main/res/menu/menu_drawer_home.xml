@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/grouptextmain"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nv_payment"
+            android:icon="@drawable/ic_home"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nv_message"
+            android:icon="@drawable/ic_message"
+            android:title="@string/menu_message" />
+        <item
+            android:id="@+id/nv_call"
+            android:icon="@drawable/ic_call"
+            android:title="@string/menu_call" />
+
+        <item
+            android:id="@+id/nc_settings"
+            android:icon="@drawable/ic_settings"
+            android:title="@string/menu_settings" />
+
+    </group>
+    <group
+        android:id="@+id/grouptextabout"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/nv_logout"
+            android:icon="@drawable/ic_logout"
+            android:title="@string/menu_logout" />
+    </group>
+</menu>

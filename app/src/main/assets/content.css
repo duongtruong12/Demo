@@ -1,0 +1,39 @@
+.content {
+	font-family: Grgaref !important;
+	font-size: 18px !important;
+	line-height: 50px !important;
+	color: #1f1f1f !important;
+	margin-top: 20px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.VCSortableInPreviewMode .PhotoCMS_Caption {
+	background-color: #eee;
+	font: italic 13px/16px arial !important;
+	color: #4a4a4a;
+	text-align: left !important;
+	padding: 8px 5px;
+	margin-bottom: 10px;
+}
+
+img {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+@font-face {
+	font-family: 'Grgaref';
+	src: url('http://dantri4.vcmedia.vn/mob_font/GeorgiaRef_fixed.eot?');
+	src:
+		url('http://dantri4.vcmedia.vn/mob_font/GeorgiaRef_fixed.eot#iefix')
+		format('embedded-opentype'),
+		url('http://dantri4.vcmedia.vn/mob_font/GeorgiaRef_fixed.woff')
+		format('woff'),
+		url('http://dantri4.vcmedia.vn/mob_font/GeorgiaRef_fixed.woff2')
+		format('woff2'),
+		url('http://dantri4.vcmedia.vn/mob_font/GeorgiaRef_fixed.ttf')
+		format('truetype');
+	font-weight: normal;
+	font-style: normal
+}

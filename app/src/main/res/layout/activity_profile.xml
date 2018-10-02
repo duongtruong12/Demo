@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.ProfileActivity">
+
+    <include layout="@layout/toolbar_home" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/ll_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f5f5f5"
+            android:gravity="center_vertical"
+            android:minHeight="150dp"
+            android:orientation="horizontal"
+            android:padding="@dimen/activity_horizontal_margin">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="@dimen/profile_activity_image_size"
+                android:layout_height="@dimen/profile_activity_image_size"
+                android:src="@drawable/img_default_profile"
+                app:civ_border_color="@color/colorPrimary"
+                app:civ_border_width="2dp"
+                tools:targetApi="lollipop" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_padding"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_fullname_user"
+                    style="@style/text_view_default"
+                    android:textSize="@dimen/big_text_size"
+                    tools:text="Duong Quang Truong" />
+
+                <TextView
+                    style="@style/text_view_default"
+                    android:layout_marginTop="@dimen/extra_small_padding"
+                    android:textColor="@color/gray"
+                    android:text="13.6k Follower" />
+
+                <TextView
+                    style="@style/text_view_default"
+                    android:textColor="@color/gray"
+                    android:text="446 Share" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
